@@ -1,5 +1,8 @@
 # nodeJs-moview-api
 nodeJS movie api
-First commit
+
+# Movie API's
+
+* /api/movie    GET     
 
 
