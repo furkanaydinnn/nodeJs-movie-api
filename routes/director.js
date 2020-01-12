@@ -113,4 +113,28 @@ router.get('/:director_id',(req,res,next) => {
     });
 });
 
+router.put('/:director_id',(req,res,next)=>{
+    const promise = Director.findByIdAndUpdate(req.params.director_id,req.body, {new : true});
+
+    promise.then((director) => {
+        if(!director)
+            next({ message: 'The director is not defined.', code: 97 });
+        res.json(director);
+    }).catch((err) => {
+        res.json(err);
+    });
+});
+
+router.delete('/:director_id',(req,res,next)=>{
+    const promise = Director.findByIdAndRemove(req.params.director_id);
+
+    promise.then((director) => {
+        if(!director)
+            next({ message: 'The director is not defined.', code: 96 });
+        res.json(director);
+    }).catch((err) => {
+        res.json(err);
+    });
+});
+
 module.exports = router;
