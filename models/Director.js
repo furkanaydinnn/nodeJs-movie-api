@@ -4,11 +4,13 @@ const Schema = mongoose.Schema;
 const DirectorSchema = new Schema({
     name: {
         type: String,
+        required: true,
         maxlength: 30,
         minlength: 3
     },
     surname: {
         type: String,
+        required: true,
         maxlength: 30,
         minlength: 3
     },

@@ -3,6 +3,8 @@ nodeJS movie api
 
 # Movie API's
 
-* /api/movie    GET     
+* /api/movie    GET
+
+
 
 
